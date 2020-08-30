@@ -1,0 +1,36 @@
+{% extends 'base.html'%} {% block content %}
+<h1 class="text-lg text-center pt-5 " style="font-size: 400%;">Packages</h1>
+    <form class="form-inline d-flex justify-content-center md-form form-sm mt-5" method="GET" >
+        <input class="form-control form-control-sm ml-3 w-50"   type="text" placeholder="Search" aria-label="Search" name="quary">
+          <input type="submit"  class="h-8 ml-2 flex-shrink-0 text-white text-mt-2 bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg mt-8 sm:mt-0" value="Search" >
+    </form>
+
+<section class="text-gray-700 body-font">
+    <div class="container px-5 py-24 mx-auto">
+        <div class="flex flex-wrap -m-4">
+
+            {% for packages in add_packages %}
+
+
+            <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+
+                <a class="block relative h-48 rounded overflow-hidden" href="/travel/packages/{{packages.slug}}/">
+                    <img alt="travel" class="object-cover object-center w-full h-full block" src="https://source.unsplash.com/720x600/?{{packages.package_place}}">
+                </a>
+                <div class="mt-4">
+
+                    <h1 class="text-gray-900 title-font text-lg font-medium">{{packages.package_place}}</h1>
+                    <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">Day : {{packages.package_Day}}</h3>
+                    <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">NIght :{{packages.package_Night}}</h3>
+                    <p class="mt-1">Price :<small>{{packages.package_price}}</small></p>
+                </div>
+            </div>
+
+            {% endfor %}
+
+
+        </div>
+    </div>
+</section>
+
+{% endblock%}

@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <section class="text-gray-700 body-font relative">
+          <form method="POST" enctype="multipart/form-data">
+            <div>
+                {% csrf_token %}
+            </div>
+              <div class="addBlog" style="padding-right: 470px; border: 2px solid black; background-image: url('https://source.unsplash.com/720x600/?travel');background-size: cover" >
+                 <div class="  lg:w-1/7 md:w-1/2 bg-white flex flex-col md:ml-auto w-full md:py-8 mt-2 md:mt-0" style="background: none">
+      <h2 class="text-gray-900 text-lg mb-1 font-medium title-font" style="text-align: center">You'r Blog</h2>
+      <p class="leading-relaxed mb-5 text-gray-600">Post-ironic portland shabby chic echo park, banjo fashion axe</p>
+                          {{ form.Blog_title.label_tag }}   {{ form.Blog_title }}
+                                  {{ form.img.label_tag }}  {{ form.img }}
+                                   {{ form.catlabel_tag }}
+                                   {{ form.cat }}
+                        {{ form.dec.label_tag }}
+                        {{ form.dec }}
+      <button class="text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">Button</button>
+      <p class="text-xs text-gray-500 mt-3">Chicharrones blog helvetica normcore iceland tousled brook viral artisan.</p>
+    </div>
+  </div>
+
+
+</div>
+
+    </form>
+
+    </section>
+{% endblock %}

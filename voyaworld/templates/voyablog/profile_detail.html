@@ -1,0 +1,118 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="container mt-5">
+{% if user.is_authenticated %}
+   <div >
+       <a href="/voyablog/profile/edit/{{ user.profile.id }}"><button class="btn bg-danger  "  style="position: absolute; right: 10px; top: 110px;">Edit</button></a>
+   </div>
+
+
+    <a href="/voyablog/blog/"><button class="btn bg-primary  "  style="position: absolute; left: 10px; top: 110px;">Back</button></a>
+    {% endif %}
+    <div class="team-single m-5">
+        <div class="row">
+            <div class="col-lg-4 col-md-5 xs-margin-30px-bottom">
+                <div class="team-single-img">
+                    <img src="{{ profile.Profile_image.url }}" alt="">
+                </div>
+                <div class="bg-light-gray padding-30px-all md-padding-25px-all sm-padding-20px-all text-center">
+                    <h4 class="margin-10px-bottom font-size24 md-font-size22 sm-font-size20 font-weight-600">Class Teacher</h4>
+                    <p class="sm-width-95 sm-margin-auto">We are proud of child student. We teaching great activities and best program for your kids.</p>
+                    <div class="margin-20px-top team-single-icons">
+                        <ul class="no-margin mt-1">
+                            <li><a href="javascript:void(0)"><i class="fab fa-facebook-f mt-1"></i></a></li>
+                            <li><a href="javascript:void(0)"><i class="fab fa-twitter mt-1"></i></a></li>
+                            <li><a href="javascript:void(0)"><i class="fab fa-google-plus-g mt-1"></i></a></li>
+                            <li><a href="javascript:void(0)"><i class="fab fa-instagram mt-1"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-8 col-md-7">
+                <div class="team-single-text padding-50px-left sm-no-padding-left">
+                    <h4 class="font-size38 sm-font-size32 xs-font-size30">{{ profile.user }}</h4>
+                    <p class="no-margin-bottom">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum voluptatem.</p>
+                    <div class="contact-info-section margin-40px-tb mt-4">
+                        <ul class="list-style9 no-margin">
+                            <li>
+
+                                <div class="row">
+                                    <div class="col-md-5 col-5">
+                                        <i class="fas fa-mobile-alt text-orange"></i>
+                                        <strong class="margin-10px-left text-orange">Phone No:</strong>
+                                    </div>
+                                    <div class="col-md-7 col-7">
+                                        <p>{{ profile.phone_no }}</p>
+                                    </div>
+                                </div>
+
+                            </li>
+                            <li>
+
+                                <div class="row">
+                                    <div class="col-md-5 col-5">
+                                        <i class="far fa-envelope text-yellow"></i>
+                                        <strong class="margin-10px-left text-yellow">Email:</strong>
+                                    </div>
+                                    <div class="col-md-7 col-7">
+                                        <p>{{ profile.user.email }}</p>
+                                    </div>
+                                </div>
+
+                            </li>
+                            <li>
+
+                                <div class="row">
+                                    <div class="col-md-5 col-5">
+                                        <i class="far fa-age text-lightred"></i>
+                                        <strong class="margin-10px-left text-lightred">Age:</strong>
+                                    </div>
+                                    <div class="col-md-7 col-7">
+                                        <p>Design Category</p>
+                                    </div>
+                                </div>
+
+                            </li>
+                            <li>
+
+                                <div class="row">
+                                    <div class="col-md-5 col-5">
+                                        <i class="fas fa-map-marker-alt text-green"></i>
+                                        <strong class="margin-10px-left text-green">Gender:</strong>
+                                    </div>
+                                    <div class="col-md-7 col-7">
+                                        <p>Regina ST, London, SK.</p>
+                                    </div>
+                                </div>
+
+                            </li>
+                            <li>
+
+                                <div class="row">
+                                    <div class="col-md-5 col-5">
+                                        <i class="fas fa-map-marker-alt text-purple"></i>
+                                        <strong class="margin-10px-left xs-margin-four-left text-purple">Adress:</strong>
+                                    </div>
+                                    <div class="col-md-7 col-7">
+                                        <p></p>
+                                    </div>
+                                </div>
+
+                            </li>
+                            <li>
+
+                            </li></ul>
+
+
+
+
+                            </div>
+            </div>
+
+
+        </div>
+    </div>
+    </div></div>
+{% endblock %}
